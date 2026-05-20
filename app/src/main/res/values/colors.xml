@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gmdm_primary">#1565C0</color>
+    <color name="gmdm_primary_dark">#0D47A1</color>
+    <color name="gmdm_on_primary">#FFFFFF</color>
+    <color name="gmdm_surface">#F5F7FA</color>
+    <color name="gmdm_on_surface">#1A1A2E</color>
+    <color name="gmdm_error">#C62828</color>
+</resources>

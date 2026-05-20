@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GMDM</string>
+    <string name="app_subtitle">Geeks MDM</string>
+    <string name="device_admin_description">GMDM qurilma boshqaruvi va to\'lov nazorati uchun Device Admin huquqi kerak.</string>
+
+    <string name="status_device_admin">Device Admin: %1$s</string>
+    <string name="status_device_owner">Device Owner: %1$s</string>
+    <string name="status_locked">Qulflangan: %1$s</string>
+    <string name="status_api">API: %1$s</string>
+    <string name="status_device_id">Qurilma ID: %1$s</string>
+
+    <string name="state_yes">Ha</string>
+    <string name="state_no">Yo\'q</string>
+    <string name="state_enabled">Yoqilgan</string>
+    <string name="state_disabled">O\'chirilgan</string>
+    <string name="api_not_configured">Sozlanmagan (test rejimi)</string>
+
+    <string name="btn_enable_admin">Device Admin yoqish</string>
+    <string name="btn_lock_test">Test: qulflash (Layer 1)</string>
+    <string name="btn_unlock_test">Test: qulfni ochish</string>
+    <string name="admin_enabled_toast">Device Admin yoqildi</string>
+    <string name="admin_not_owner_hint">Device Owner uchun ADB provisioning kerak. Qo\'llanma keyingi modulda.</string>
+    <string name="lock_applied_toast">Qulflash qo\'llandi</string>
+    <string name="unlock_applied_toast">Qulf holati saqlandi (Layer 2–4 keyingi modullarda)</string>
+</resources>
