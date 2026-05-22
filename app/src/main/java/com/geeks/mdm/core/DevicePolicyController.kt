@@ -80,6 +80,28 @@ class DevicePolicyController(private val context: Context) {
 
     fun getAdminComponent(): ComponentName = adminComponent
 
+    fun enableLockTaskMode(): Boolean {
+        if (!isDeviceOwner()) return false
+        return try {
+            dpm.setLockTaskPackages(adminComponent, arrayOf(appContext.packageName))
+            true
+        } catch (e: SecurityException) {
+            Log.e(TAG, "enableLockTaskMode xatolik", e)
+            false
+        }
+    }
+
+    fun disableLockTaskMode(): Boolean {
+        if (!isDeviceOwner()) return false
+        return try {
+            dpm.setLockTaskPackages(adminComponent, emptyArray())
+            true
+        } catch (e: SecurityException) {
+            Log.e(TAG, "disableLockTaskMode xatolik", e)
+            false
+        }
+    }
+
     companion object {
         private const val TAG = "DevicePolicyController"
     }

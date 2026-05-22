@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gmdm_error">#C62828</color>
+    <color name="gmdm_on_primary">#FFFFFF</color>
+    <color name="gmdm_on_surface">#1A1A2E</color>
+    <color name="gmdm_primary">#1565C0</color>
+    <color name="gmdm_primary_dark">#0D47A1</color>
+    <color name="gmdm_surface">#F5F7FA</color>
+    <color name="lock_screen_background">#0D1117</color>
+    <color name="lock_screen_text">#FFFFFF</color>
+    <color name="lock_screen_text_secondary">#B0BEC5</color>
+    <string name="accessibility_service_description">GMDM: Sozlamalar va tizim ilovalariga ruxsatsiz kirishni bloklash.</string>
+    <string name="admin_enabled_toast">Device Admin yoqildi</string>
+    <string name="admin_not_owner_hint">Device Owner uchun ADB provisioning kerak. Qo\'llanma keyingi modulda.</string>
+    <string name="api_not_configured">Sozlanmagan (test rejimi)</string>
+    <string name="app_name">GMDM</string>
+    <string name="app_subtitle">Geeks MDM</string>
+    <string name="battery_restricted">Cheklangan (sozlang)</string>
+    <string name="battery_unrestricted">Cheklanmagan</string>
+    <string name="btn_accessibility_settings">Accessibility yoqish</string>
+    <string name="btn_battery_settings">Batareya / Autostart sozlamalari</string>
+    <string name="btn_enable_admin">Device Admin yoqish</string>
+    <string name="btn_lock_test">Test: qulflash (4 qatlam)</string>
+    <string name="btn_overlay_permission">Overlay ruxsatini berish</string>
+    <string name="btn_sync_now">Hozir sinxronlash</string>
+    <string name="btn_unlock_test">Test: qulfni ochish</string>
+    <string name="device_admin_description">GMDM qurilma boshqaruvi va to\'lov nazorati uchun Device Admin huquqi kerak.</string>
+    <string name="lock_applied_toast">Qulflash qo\'llandi</string>
+    <string name="lock_layers_applied_toast">4 qatlamli qulflash qo\'llandi</string>
+    <string name="lock_partial_failed">Qulflash qisman: %1$s</string>
+    <string name="lock_screen_device_id">Qurilma: %1$s</string>
+    <string name="lock_screen_icon_desc">Qulf belgisi</string>
+    <string name="lock_screen_message">To\'lov kechiktirilgan yoki siyosat buzilgan. Qo\'llab-quvvatlash bilan bog\'laning.</string>
+    <string name="lock_screen_title">Qurilma qulflangan</string>
+    <string name="notification_channel_description">Qurilma nazorati fon xizmati — o\'chirilmasligi kerak</string>
+    <string name="notification_channel_name">GMDM himoya</string>
+    <string name="notification_permission_denied">Bildirishnoma ruxsati berilmadi — fon xizmati baribir ishlaydi</string>
+    <string name="notification_text">Qurilma himoyasi yoqilgan</string>
+    <string name="notification_title">GMDM faol</string>
+    <string name="overlay_lock_hint">GMDM himoyasi faol</string>
+    <string name="phone_permission_denied">Telefon holati ruxsati berilmadi — SIM o\'zgarishi kuzatilmaydi</string>
+    <string name="sim_monitoring_active">Faol</string>
+    <string name="sim_monitoring_no_permission">Ruxsat kerak</string>
+    <string name="state_disabled">O\'chirilgan</string>
+    <string name="state_enabled">Yoqilgan</string>
+    <string name="state_no">Yo\'q</string>
+    <string name="state_yes">Ha</string>
+    <string name="status_accessibility">Accessibility: %1$s</string>
+    <string name="status_api">API: %1$s</string>
+    <string name="status_battery_optimization">Batareya cheklovi: %1$s</string>
+    <string name="status_device_admin">Device Admin: %1$s</string>
+    <string name="status_device_id">Qurilma ID: %1$s</string>
+    <string name="status_device_owner">Device Owner: %1$s</string>
+    <string name="status_foreground_service">Fon xizmati: %1$s</string>
+    <string name="status_last_sync">Oxirgi sync: %1$s</string>
+    <string name="status_last_tamper">Oxirgi tamper: %1$s</string>
+    <string name="status_locked">Qulflangan: %1$s</string>
+    <string name="status_overlay_permission">Overlay ruxsati: %1$s</string>
+    <string name="status_sim_monitoring">SIM monitoring: %1$s</string>
+    <string name="sync_api_disabled">API sozlanmagan. gradle.properties da API_BASE_URL kiriting.</string>
+    <string name="sync_context_missing">Ilova konteksti topilmadi</string>
+    <string name="sync_failed">Sinxronlash xatolik: %1$s</string>
+    <string name="sync_in_progress">Server bilan ulanmoqda…</string>
+    <string name="sync_lock_status_http_error">Lock-status xatolik: HTTP %1$d</string>
+    <string name="sync_msg_heartbeat_error">Heartbeat xato</string>
+    <string name="sync_msg_heartbeat_ok">Heartbeat OK</string>
+    <string name="sync_msg_locked">Qulflandi (server: should_lock=true, reason=%1$s)</string>
+    <string name="sync_msg_unchanged_already_locked">Holat o\'zgarmadi (allaqachon qulflangan yoki qo\'llab bo\'lmadi)</string>
+    <string name="sync_msg_unchanged_not_locked">Holat o\'zgarmadi (qulf yo\'q)</string>
+    <string name="sync_msg_unlocked">Qulf ochildi (server: should_lock=false)</string>
+    <string name="sync_never">Hech qachon</string>
+    <string name="sync_server_lock_not_applied">Server qulflash buyrug\'i, lekin qo\'llanmadi: %1$s</string>
+    <string name="sync_success">%1$s</string>
+    <string name="sync_unknown_error">Noma\'lum xatolik</string>
+    <string name="tamper_none">Yo\'q</string>
+    <string name="unlock_applied_toast">Qulf ochildi</string>
+    <style name="Theme.GMDM" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/gmdm_primary</item>
+        <item name="colorPrimaryDark">@color/gmdm_primary_dark</item>
+        <item name="colorOnPrimary">@color/gmdm_on_primary</item>
+        <item name="android:statusBarColor">@color/gmdm_primary_dark</item>
+        <item name="android:navigationBarColor">@color/gmdm_primary_dark</item>
+        <item name="android:windowBackground">@color/gmdm_surface</item>
+    </style>
+    <style name="Theme.GMDM.LockScreen" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:statusBarColor">@color/lock_screen_background</item>
+        <item name="android:navigationBarColor">@color/lock_screen_background</item>
+        <item name="android:windowBackground">@color/lock_screen_background</item>
+        <item name="android:windowShowWallpaper">false</item>
+    </style>
+</resources>

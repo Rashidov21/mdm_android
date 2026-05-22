@@ -64,7 +64,7 @@ class MdmForegroundService : Service() {
         }
     }
 
-  /**
+    /**
      * Ba'zi OEMlarda notification yo'qolishi mumkin — muntazam yangilash.
      */
     private fun startNotificationRefreshLoop() {

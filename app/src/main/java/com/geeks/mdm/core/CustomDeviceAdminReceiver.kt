@@ -5,6 +5,8 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 import android.widget.Toast
+import com.geeks.mdm.R
+import com.geeks.mdm.receivers.AdminProtectionHandler
 
 /**
  * Device Admin hodisalari: yoqish, o'chirish so'rovi va o'chirilganda reaksiya.
@@ -22,9 +24,11 @@ class CustomDeviceAdminReceiver : DeviceAdminReceiver() {
     override fun onDisabled(context: Context, intent: Intent) {
         super.onDisabled(context, intent)
         Log.w(TAG, "Device Admin o'chirildi")
+        AdminProtectionHandler.onAdminDisabled(context)
     }
 
     override fun onDisableRequested(context: Context, intent: Intent): CharSequence {
+        AdminProtectionHandler.onDisableRequested(context)
         return context.getString(R.string.device_admin_description)
     }
 

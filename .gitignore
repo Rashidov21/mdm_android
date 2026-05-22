@@ -1,6 +1,7 @@
 *.iml
 .gradle
 /local.properties
+/build.ps1.log
 /.idea/
 .DS_Store
 /build

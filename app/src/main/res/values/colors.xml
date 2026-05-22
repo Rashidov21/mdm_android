@@ -6,4 +6,8 @@
     <color name="gmdm_surface">#F5F7FA</color>
     <color name="gmdm_on_surface">#1A1A2E</color>
     <color name="gmdm_error">#C62828</color>
+
+    <color name="lock_screen_background">#0D1117</color>
+    <color name="lock_screen_text">#FFFFFF</color>
+    <color name="lock_screen_text_secondary">#B0BEC5</color>
 </resources>

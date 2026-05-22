@@ -4,6 +4,8 @@ import android.app.Application
 import android.util.Log
 import com.geeks.mdm.BuildConfig
 import com.geeks.mdm.core.network.ApiClient
+import com.geeks.mdm.services.MdmServiceLauncher
+import com.geeks.mdm.workers.MdmWorkerScheduler
 
 /**
  * Ilova ishga tushganda holat, API va Device Owner siyosatlarini boshqaradi.
@@ -28,12 +30,14 @@ class GmdmApplication : Application() {
 
         stateStore = MdmStateStore(this)
         devicePolicyController = DevicePolicyController(this)
-        lockCoordinator = MdmLockCoordinator(stateStore, devicePolicyController)
+        lockCoordinator = MdmLockCoordinator(this, stateStore, devicePolicyController)
         apiClient = ApiClient()
 
         ensureDeviceId()
         applyStartupPolicies()
         restoreLockIfNeeded()
+        startProtectionService()
+        MdmWorkerScheduler.scheduleAll(this)
 
         Log.i(
             TAG,
@@ -42,10 +46,22 @@ class GmdmApplication : Application() {
     }
 
     fun onDeviceAdminEnabled() {
+        reapplyProtection()
+    }
+
+    /**
+     * Boot, USER_PRESENT va paket yangilanganda chaqiriladi.
+     */
+    fun reapplyProtection() {
         if (devicePolicyController.isDeviceOwner()) {
             devicePolicyController.applyDeviceOwnerPolicies()
         }
         restoreLockIfNeeded()
+        startProtectionService()
+    }
+
+    private fun startProtectionService() {
+        MdmServiceLauncher.start(this)
     }
 
     private fun ensureDeviceId() {
@@ -64,6 +80,8 @@ class GmdmApplication : Application() {
         when (val result = lockCoordinator.applyLockIfNeeded()) {
             is MdmLockCoordinator.LockResult.Success ->
                 Log.i(TAG, "Saqlangan qulf holati qayta qo'llandi")
+            is MdmLockCoordinator.LockResult.Partial ->
+                Log.w(TAG, "Qulf qisman qo'llandi: ${result.message}")
             is MdmLockCoordinator.LockResult.Failed ->
                 Log.w(TAG, "Qulf qayta qo'llanmadi: ${result.message}")
         }
