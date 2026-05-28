@@ -1,0 +1,8 @@
+﻿{
+  "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME": "com.geeks.mdm/.core.CustomDeviceAdminReceiver",
+  "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION": "https://your-server.example.com/mdm/app-release-unsigned.apk",
+  "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_CHECKSUM": "luyBN2Z+M51/MGVGGnhadsvXTqF0SEJ6t9cqK/fleRA=",
+  "android.app.extra.PROVISIONING_SKIP_ENCRYPTION": true,
+  "android.app.extra.PROVISIONING_LEAVE_ALL_SYSTEM_APPS_ENABLED": true
+}
+
